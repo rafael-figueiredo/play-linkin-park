@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Player com Javascript</title>
+	<link rel="stylesheet" type="text/css" href="plugin/css/style.css"> <!-- carregando css do plugin -->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- carregando meu estilo de pagina -->
+	<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script> <!-- carregando primeiro jquery -->
+    <script type="text/javascript" src="plugin/jquery-jplayer/jquery.jplayer.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="plugin/ttw-music-player-min.js"></script> <!-- carregando js do plugin -->
+    <script type="text/javascript" src="js/myplaylist.js"></script> <!-- carregando js criado para playlist -->
+
+   <!-- inicializando o plugin -->
+    <script type="text/javascript">
+    	// funcao criada para descricao- texto a ser apresentado na pagina
+        $(document).ready(function(){ 
+            var description = 'Linkin Park é uma banda de rock dos Estados Unidos formada em 1996 em Agoura Hills, Califórnia. Desde a sua formação, a banda já vendeu pelo menos 68 milhões de álbuns e ganhou dois Grammy Awards. Eles tiveram o sucesso alcançado em 2000, com o seu álbum de estreia, Hybrid Theory, que foi certificado pela RIAA como disco de diamante em 2005. O álbum seguinte, Meteora, continuou o sucesso da banda, com o topo no gráfico de álbuns Billboard 200 em 2003, e foi seguido por um extenso trabalho de caridades e de turnês em todo o mundo. Em 2003, Linkin Park foi nomeada pela MTV2 a sexta maior banda da era de videoclipes e a terceira melhor do novo milênio atrás de Oasis e Coldplay.';
+
+            $('body').ttwMusicPlayer(myPlaylist, {
+                autoPlay:false, //autoplay sem inicializar com play
+                description:description,
+                jPlayer:{
+                    swfPath:'plugin/jquery-jplayer' //diretorio do plugin para carregar
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
